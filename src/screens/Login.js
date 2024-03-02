@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { login } from '../store/actions/authActions';
 
-const LoginScreen = () => {
+const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -85,4 +86,4 @@ const mapStateToProps = (state) => ({
     isAuthenticated: state.auth.isAuthenticated,
   });
   
-export default connect(mapStateToProps, { login })(LoginScreen);
+export default connect(mapStateToProps, { login })(Login);
